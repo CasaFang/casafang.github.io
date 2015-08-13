@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[FLY in Light]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="https://www.flyinlight.com/"/>
+  <updated>2015-08-13T15:25:09.000Z</updated>
+  <id>https://www.flyinlight.com/</id>
+  
+  <author>
+    <name><![CDATA[睡着的咖啡豆zZ]]></name>
+    <email><![CDATA[casafang2015@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[hexo 3.0搭建笔记]]></title>
+    <link href="https://www.flyinlight.com/2015/08/13/hexo-3-0%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/"/>
+    <id>https://www.flyinlight.com/2015/08/13/hexo-3-0搭建笔记/</id>
+    <published>2015-08-13T13:01:16.000Z</published>
+    <updated>2015-08-13T15:25:09.000Z</updated>
+    <content type="html"><![CDATA[<p>一直想抽时间搭建一个自己的Hexo博客，苦于没有时间。今天这个念头又冒了出来，于是抽了些时间搭建了这个博客。作为一枚爱写文又追求逼格的程序猿，hexo的风格我非常喜欢。那么新博的第一篇就献给它。<br><a id="more"></a></p>
+<h2 id="1-Hexo简介">1.Hexo简介</h2><p>hexo是一个基于Node.js的静态博客程序，其编译上百篇文字只需要几秒。hexo生成的静态网页可以直接放到GitHub Pages，BAE，SAE等平台上。虽然搭建花费了一些时间，但是一旦搭建完成，写文就变成了一种极简的享受。<br>比如Hexo的官方网站<a href="http://hexo.io" target="_blank" rel="external">http://hexo.io</a> 就是托管于github的pages服务上</p>
+<h2 id="2-Hexo安装方法">2.Hexo安装方法</h2><h3 id="环境准备">环境准备</h3><ul>
+<li>安装Node.js</li>
+</ul>
+<p>到<a href="https://nodejs.org" target="_blank" rel="external">Node.js</a>官网下载相应平台的<a href="https://nodejs.org/dist/v0.12.7/node-v0.12.7.pkg" target="_blank" rel="external">最新版本</a>，一路安装即可。</p>
+<ul>
+<li>通过npm安装Hexo</li>
+<li>  $ npm install hexo-cli -g<br>  $ install hexo –save</li>
+</ul>
+<h2 id="3-Hexo配置方法">3.Hexo配置方法</h2><p>新建一个需要当做博客目录的文件夹</p>
+<pre><code>$ <span class="built_in">mkdir</span> hexo
+</code></pre><p>进去之后加入hexo主程序和安装npm</p>
+<pre><code><span class="variable">$ </span>hexo init
+<span class="variable">$ </span>npm install
+</code></pre><p>文件夹注释</p>
+<ul>
+<li>scaffolds 工具模板</li>
+<li>scripts hexo的功能js</li>
+<li>source 博客资源文件夹</li>
+<li>source/_drafts 草稿文件夹</li>
+<li>source/_posts 文章文件夹</li>
+<li>themes 存放皮肤的文件夹</li>
+<li>themes/landscape 默认皮肤文件夹</li>
+<li>_config.yml 全局配置文件</li>
+<li>db.json json格式的静态常量数据库</li>
+<li>_posts 目录：Hexo存放博客文章的文件夹</li>
+<li>themes 目录：存放皮肤的文件夹，默认使用官方的主题 你也可以从 hexo主题页面 下载你喜欢的主题</li>
+</ul>
+<h3 id="配置hexo">配置hexo</h3><h4 id="Hexo全局配置">Hexo全局配置</h4><p>用文本编辑器修改<code>_config.yml</code>这个文件 大致如下 只需要自行修改几个 其他保持默认即可</p>
+<p>通常需要修改站点名称 /URL格式 /归档设置 /disqus评论用户名 /部署配置 这几项就可以了 注意冒号后面都要添加一个半角空格 之后才是设置参数</p>
+<p>自定义域名设置 在<code>source</code>我文件夹下面新建<code>CNAME</code>文件 里面写入你的自定义域名 并设置您的dns配置cname方式到服务提供商的给的地址即可</p>
+<pre><code><span class="preprocessor"># Hexo Configuration</span>
+<span class="preprocessor">## Docs: http://hexo.io/docs/configuration.html</span>
+<span class="preprocessor">## Source: https://github.com/hexojs/hexo/</span>
+
+<span class="preprocessor"># Site</span>
+<span class="label">title:</span> FLY <span class="keyword">in</span> Light <span class="preprocessor">#博客标题</span>
+<span class="label">subtitle:</span> <span class="preprocessor">#博客副标题</span>
+<span class="label">description:</span> 有梦为马,随处可栖. <span class="preprocessor">#博客描述</span>
+<span class="label">author:</span> 睡着的咖啡豆zZ <span class="preprocessor">#作者名</span>
+<span class="label">email:</span> casafang2015@gmail.com <span class="preprocessor">#email地址</span>
+<span class="label">language:</span> <span class="built_in">zh</span>-Hans <span class="preprocessor">#语言</span>
+<span class="label">timezone:</span> <span class="preprocessor">#时区</span>
+<span class="label">avatar:</span> /images/cafebean.jpg <span class="preprocessor">#头像</span>
+<span class="label">social:</span> <span class="preprocessor">#社交链接</span>
+ gitHub: https://github.com/CasaFang
+
+<span class="preprocessor"># URL</span>
+<span class="preprocessor">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span>
+<span class="label">url:</span> https://www.flyinlight.com <span class="preprocessor">#访问博客的地址</span>
+<span class="label">root:</span> / <span class="preprocessor">#博客的根目录</span>
+<span class="label">permalink:</span> :year/:month/:day/:title/ <span class="preprocessor">#博客url地址结构</span>
+<span class="label">permalink_defaults:</span>
+
+<span class="preprocessor"># Directory</span>
+<span class="label">source_dir:</span> source
+<span class="label">public_dir:</span> public
+<span class="label">tag_dir:</span> tags
+<span class="label">archive_dir:</span> archives
+<span class="label">category_dir:</span> categories
+<span class="label">code_dir:</span> downloads/code
+<span class="label">i18n_dir:</span> :lang
+<span class="label">skip_render:</span>
+<span class="preprocessor"># Writing</span>
+<span class="label">new_post_name:</span> :title.md <span class="preprocessor"># File name of new posts</span>
+<span class="label">default_layout:</span> post
+<span class="label">titlecase:</span> false <span class="preprocessor"># Transform title into titlecase</span>
+<span class="label">external_link:</span> true <span class="preprocessor"># Open external links in new tab</span>
+<span class="label">filename_case:</span> <span class="number">0</span>
+<span class="label">render_drafts:</span> false
+<span class="label">post_asset_folder:</span> false
+<span class="label">relative_link:</span> false
+<span class="label">future:</span> true
+<span class="label">highlight:</span>
+  enable: true
+  line_number: true
+  auto_detect: true
+  tab_replace:
+
+<span class="preprocessor"># Category &amp; Tag</span>
+<span class="label">default_category:</span> uncategorized
+<span class="label">category_map:</span>
+<span class="label">tag_map:</span>
+
+<span class="preprocessor"># Date / Time format</span>
+<span class="preprocessor">## Hexo uses Moment.js to parse and display date</span>
+<span class="preprocessor">## You can customize the date format as defined in</span>
+<span class="preprocessor">## http://momentjs.com/docs/#/displaying/format/</span>
+<span class="label">date_format:</span> YYYY-MM-DD
+<span class="label">time_format:</span> HH:mm:ss
+
+<span class="preprocessor"># Pagination</span>
+<span class="preprocessor">## Set per_page to 0 to disable pagination</span>
+<span class="label">per_page:</span> <span class="number">10</span>
+<span class="label">pagination_dir:</span> page
+
+<span class="preprocessor"># Extensions</span>
+<span class="preprocessor">## Plugins: http://hexo.io/plugins/</span>
+<span class="preprocessor">## Themes: http://hexo.io/themes/</span>
+<span class="label">theme:</span> next
+
+<span class="preprocessor"># Deployment</span>
+<span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span>
+<span class="label">deploy:</span>
+  type: git
+  repo: https://github.com/CasaFang/casafang.github.io.git
+</code></pre><h4 id="Hexo主题设置">Hexo主题设置</h4><p>同样编辑主题文件夹的<code>_config.yml</code></p>
+<pre><code><span class="preprocessor"># when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -&gt; "archives" )</span>
+menu:
+  home: /
+  #categories: /categories
+  #about: /about
+  archives: /archives
+  tags: /tags
+  #commonweal: /<span class="number">404.</span>html
+
+<span class="preprocessor"># Place your favicon.ico to /source directory.</span>
+favicon: /favicon.ico
+
+<span class="preprocessor"># Set default keywords (Use a comma to separate)</span>
+keywords: <span class="string">"Hexo,next"</span>
+
+<span class="preprocessor"># Set rss to false to disable feed link.</span>
+<span class="preprocessor"># Leave rss as empty to use site's feed link.</span>
+<span class="preprocessor"># Set rss to specific value if you have burned your feed already.</span>
+rss: <span class="literal">false</span>
+
+<span class="preprocessor"># Icon fonts</span>
+<span class="preprocessor"># Place your font into next/source/fonts, specify directory-name and font-name here</span>
+<span class="preprocessor"># Avialable: default | linecons | fifty-shades | feather</span>
+icon_font: <span class="keyword">default</span>
+<span class="preprocessor">#icon_font: fifty-shades</span>
+<span class="preprocessor">#icon_font: feather</span>
+<span class="preprocessor">#icon_font: linecons</span>
+
+<span class="preprocessor"># Code Highlight theme</span>
+<span class="preprocessor"># Available value: normal | night | night eighties | night blue | night bright</span>
+<span class="preprocessor"># https://github.com/chriskempson/tomorrow-theme</span>
+highlight_theme: normal
+
+
+<span class="preprocessor"># MathJax Support</span>
+mathjax:
+
+
+<span class="preprocessor"># Schemes</span>
+scheme: Mist
+
+
+<span class="preprocessor"># Sidebar, available value:</span>
+<span class="preprocessor">#  - post    expand on posts automatically. Default.</span>
+<span class="preprocessor">#  - always  expand for all pages automatically</span>
+<span class="preprocessor">#  - hide    expand only when click on the sidebar toggle icon.</span>
+sidebar: post
+<span class="preprocessor">#sidebar: always</span>
+<span class="preprocessor">#sidebar: hide</span>
+
+
+<span class="preprocessor"># Automatically scroll page to section which is under &lt;!-- more --&gt; mark.</span>
+scroll_to_more: <span class="literal">true</span>
+
+
+<span class="preprocessor"># Automatically add list number to toc.</span>
+toc_list_number: <span class="literal">true</span>
+
+<span class="preprocessor"># Automatically Excerpt</span>
+auto_excerpt:
+  enable: <span class="literal">false</span>
+  length: <span class="number">150</span>
+
+<span class="preprocessor"># Use Lato font</span>
+<span class="preprocessor"># Note: this option is avialable only when the language is not `zh-Hans`</span>
+use_font_lato: <span class="literal">true</span>
+
+<span class="preprocessor"># Make duoshuo show UA</span>
+<span class="preprocessor"># user_id must NOT be null when admin_enable is true!</span>
+<span class="preprocessor"># you can visit http://dev.duoshuo.com get duoshuo user id.</span>
+duoshuo_info:
+  ua_enable: <span class="literal">true</span>
+  admin_enable: <span class="literal">false</span>
+  user_id: <span class="number">0</span>
+
+<span class="preprocessor">## DO NOT EDIT THE FOLLOWING SETTINGS</span>
+<span class="preprocessor">## UNLESS YOU KNOW WHAT YOU ARE DOING</span>
+
+<span class="preprocessor"># Use velocity to animate everything.</span>
+use_motion: <span class="literal">true</span>
+
+<span class="preprocessor"># Fancybox</span>
+fancybox: <span class="literal">true</span>
+
+<span class="preprocessor"># Static files</span>
+vendors: vendors
+css: css
+js: js
+images: images
+
+<span class="preprocessor"># Theme version</span>
+version: <span class="number">0.4</span><span class="number">.5</span><span class="number">.1</span>
+</code></pre><h3 id="写文章">写文章</h3><p>执行new命令，生成指定名称的文章至hexo\source_posts\postName.md。</p>
+<pre><code>hexo <span class="keyword">new</span> [layout] <span class="string">"postName"</span> <span class="preprocessor">#新建文章</span>
+</code></pre><p>其中layout是可选参数，默认值为post。有哪些layout呢，请到scaffolds目录下查看，这些文件名称就是layout名称。当然你可以添加自己的layout，方法就是添加一个文件即可，同时你也可以编辑现有的layout，比如post的layout默认是hexo\scaffolds\post.md。</p>
+<pre><code>title: { { title } }
+date: { { date } }
+<span class="header">tags:
+---</span>
+</code></pre><blockquote>
+<p>请注意，大括号与大括号之间我多加了个空格，否则会被转义，不能正常显示。</p>
+</blockquote>
+<p>我想添加categories，以免每次手工输入，只需要修改这个文件添加一行，如下：</p>
+<pre><code>title: { { title } }
+date: { { date } }
+categories: 
+<span class="header">tags: 
+---</span>
+</code></pre><p>postName是md文件的名字，同时也出现在你文章的URL中，postName如果包含空格，必须用”将其包围，postName可以为中文。</p>
+<blockquote>
+<p>注意，所有文件：后面都必须有个空格，不然会报错。</p>
+</blockquote>
+<p>看一下刚才生成的文件hexo\source_posts\postName.md，内容如下：</p>
+<pre><code>title: postName <span class="preprocessor">#文章页面上的显示名称，可以任意修改，不会出现在URL中</span>
+date: <span class="number">2013</span>-<span class="number">12</span>-<span class="number">02</span> <span class="number">15</span>:<span class="number">30</span>:<span class="number">16</span> <span class="preprocessor">#文章生成时间，一般不改，当然也可以任意修改</span>
+categories: <span class="preprocessor">#文章分类目录，可以为空，注意:后面有个空格</span>
+tags: <span class="preprocessor">#文章标签，可空，多标签请用格式[tag1,tag2,tag3]，注意:后面有个空格</span>
+---
+这里开始使用markdown格式输入你的正文。
+</code></pre><p>接下来，你就可以用喜爱的编辑器尽情书写你的文章。关于markdown语法，可以参考<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown语法</a>。</p>
+<h4 id="fancybox">fancybox</h4><p>可能有人对这个Reading页面中图片的fancybox效果感兴趣，这个是怎么做的呢。<br>很简单，只需要在你的文章*.md文件的头上添加photos项即可，然后一行行添加你要展示的照片：</p>
+<pre><code><span class="string">layout:</span> photo
+<span class="string">title:</span> 我的阅历
+<span class="string">date:</span> <span class="number">2085</span>-<span class="number">01</span>-<span class="number">16</span> <span class="number">07</span>:<span class="number">33</span>:<span class="number">44</span>
+<span class="string">tags:</span> [hexo]
+<span class="string">photos:</span>
+- <span class="string">http:</span><span class="comment">//bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg</span>
+- <span class="string">http:</span><span class="comment">//bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg</span>
+</code></pre><blockquote>
+<p>经过测试，文件头上的layout: photo可以省略。</p>
+</blockquote>
+<p>不想每次都手动添加怎么办？同样的，打开您的hexo\scaffolds\photo.md</p>
+<pre><code>layout: { { layout } }
+title: { { title } }
+date: { { date } }
+tags: 
+photos: 
+<span class="header">- 
+---</span>
+</code></pre><p>然后每次可以执行带layout的new命令生成照片文章：</p>
+<pre><code>hexo <span class="keyword">new</span> photo <span class="string">"photoPostName"</span> <span class="preprocessor">#新建照片文章</span>
+</code></pre><h4 id="description">description</h4><p>markdown文件头中也可以添加description，以覆盖全局配置文件中的description内容，请参考下文_config.yml的介绍。</p>
+<pre><code>title: hexo你的博客
+date: 2013-11-22 17:11:54
+categories: default
+tags: [hexo]
+<span class="header">description: 你对本页的描述
+---</span>
+</code></pre><blockquote>
+<p>hexo默认会处理全部markdown和html文件，如果不想让hexo处理你的文件，可以在文件头中加入layout: false。</p>
+</blockquote>
+<h4 id="文章摘要">文章摘要</h4><p>在需要显示摘要的地方添加如下代码即可：</p>
+<pre><code>以上是摘要
+<span class="comment">&lt;!--more--&gt;</span>
+以下是余下全文
+</code></pre><p>more以上内容即是文章摘要，在主页显示，more以下内容点击『&gt; Read More』链接打开全文才显示。</p>
+<blockquote>
+<p>hexo中所有文件的编码格式均是UTF-8。</p>
+</blockquote>
+<h3 id="4-Hexo部署方法">4.Hexo部署方法</h3><p>写完文章之后 就可以启动本地服务器测试了</p>
+<pre><code>hexo <span class="keyword">server</span>
+</code></pre><p>这个时候hexo启动localhost的4000端口 静态的网站架设完成</p>
+<h3 id="5-命令行使用">5.命令行使用</h3><p>常用命令：</p>
+<pre><code>hexo help <span class="preprocessor">#查看帮助</span>
+hexo init <span class="preprocessor">#初始化一个目录</span>
+hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="preprocessor">#新建文章</span>
+hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="preprocessor">#新建页面</span>
+hexo generate <span class="preprocessor">#生成网页，可以在 public 目录查看整个网站的文件</span>
+hexo <span class="keyword">server</span> <span class="preprocessor">#本地预览，'Ctrl+C'关闭</span>
+hexo deploy <span class="preprocessor">#部署.deploy目录</span>
+hexo clean <span class="preprocessor">#清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**</span>
+</code></pre><p>复合命令：</p>
+<pre><code>hexo deploy -<span class="keyword">g</span>
+hexo server -<span class="keyword">g</span>
+</code></pre><p>简写：</p>
+<pre><code>hexo <span class="keyword">n</span> == hexo new
+hexo <span class="keyword">g</span> == hexo <span class="keyword">generate</span>
+hexo s == hexo server
+hexo <span class="keyword">d</span> == hexo deploy
+</code></pre><p>安装插件，<plugin-name>为插件名</plugin-name></p>
+<pre><code>npm <span class="operator"><span class="keyword">install</span> &lt;<span class="keyword">plugin</span>-<span class="keyword">name</span>&gt; <span class="comment">--save</span>
+npm <span class="keyword">update</span> #升级
+npm <span class="keyword">uninstall</span> &lt;<span class="keyword">plugin</span>-<span class="keyword">name</span>&gt; #卸载</span>
+</code></pre><p>安装主题，<repository>为主题的 git 仓库，<theme-name>为要存放在本地的目录名</theme-name></repository></p>
+<pre><code>git clone <span class="tag">&lt;<span class="title">repository</span>&gt;</span> themes/<span class="tag">&lt;<span class="title">theme-name</span>&gt;</span>
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>一直想抽时间搭建一个自己的Hexo博客，苦于没有时间。今天这个念头又冒了出来，于是抽了些时间搭建了这个博客。作为一枚爱写文又追求逼格的程序猿，hexo的风格我非常喜欢。那么新博的第一篇就献给它。<br>]]>
+    
+    </summary>
+    
+      <category term="blog" scheme="https://www.flyinlight.com/tags/blog/"/>
+    
+      <category term="hexo" scheme="https://www.flyinlight.com/tags/hexo/"/>
+    
+      <category term="hexo" scheme="https://www.flyinlight.com/categories/hexo/"/>
+    
+  </entry>
+  
+</feed>
