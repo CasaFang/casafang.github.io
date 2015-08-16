@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="certificates,developer,iOS," />
+  <meta name="keywords" content="iOS,mac,ruby," />
 
 
 
@@ -37,17 +37,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。">
+<meta name="description" content="cocoapods的安装需要Ruby环境，特此做个笔记。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于iOS证书那些事">
-<meta property="og:url" content="https://www.flyinlight.com/2015/08/16/关于iOS证书那些事/index.html">
+<meta property="og:title" content="在Mac安装Ruby指南">
+<meta property="og:url" content="https://www.flyinlight.com/2015/08/17/在Mac安装Ruby指南/index.html">
 <meta property="og:site_name" content="FLY in Light">
-<meta property="og:description" content="作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。">
-<meta property="og:image" content="https://www.flyinlight.com/images/iOS.jpg">
-<meta property="og:updated_time" content="2015-08-16T17:07:39.000Z">
+<meta property="og:description" content="cocoapods的安装需要Ruby环境，特此做个笔记。">
+<meta property="og:image" content="https://www.flyinlight.com/images/ruby.jpg">
+<meta property="og:updated_time" content="2015-08-16T17:06:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于iOS证书那些事">
-<meta name="twitter:description" content="作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。">
+<meta name="twitter:title" content="在Mac安装Ruby指南">
+<meta name="twitter:description" content="cocoapods的安装需要Ruby环境，特此做个笔记。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -57,7 +57,7 @@
   };
 </script>
 
-  <title> 关于iOS证书那些事 | FLY in Light </title>
+  <title> 在Mac安装Ruby指南 | FLY in Light </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -164,7 +164,7 @@
           
           
             
-              关于iOS证书那些事
+              在Mac安装Ruby指南
             
           
         </h1>
@@ -173,8 +173,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-16T21:49:25+08:00" content="2015-08-16">
-            2015-08-16
+          <time itemprop="dateCreated" datetime="2015-08-17T00:51:45+08:00" content="2015-08-17">
+            2015-08-17
           </time>
         </span>
 
@@ -183,8 +183,20 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/iOS/" itemprop="url" rel="index">
-                  <span itemprop="name">iOS</span>
+                <a href="/categories/mac/" itemprop="url" rel="index">
+                  <span itemprop="name">mac</span>
+                </a>
+              </span>
+
+              
+              
+                ， 
+              
+
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/mac/ruby/" itemprop="url" rel="index">
+                  <span itemprop="name">ruby</span>
                 </a>
               </span>
 
@@ -199,8 +211,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/16/关于iOS证书那些事/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/16/关于iOS证书那些事/" itemprop="commentsCount"></span>
+              <a href="/2015/08/17/在Mac安装Ruby指南/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/17/在Mac安装Ruby指南/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -217,9 +229,9 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="/images/iOS.jpg" rel="gallery_cideqvqz3000kdfs6zfk0y2ir"
+                 href="/images/ruby.jpg" rel="gallery_cideqvqyy0009dfs6r3zv4wgg"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/images/iOS.jpg" itemprop="contentUrl"/>
+                <img src="/images/ruby.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -230,24 +242,44 @@
       
 
       
-        <span itemprop="articleBody"><p>作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。<br><a id="more"></a></p>
-<h1 id="相关基础">相关基础</h1><hr>
-<h2 id="Xcode相关名词">Xcode相关名词</h2><p><strong>Keychain</strong></p>
-<p>MAC下用于存储和管理密钥等私密信息的工具.</p>
-<p><strong>Identifiers / Bundle ID / App ID</strong></p>
-<p>这是应用的唯一标识.</p>
-<p><strong>Device UUID</strong></p>
-<p>这是设备的唯一标识.</p>
-<p><strong>Provisioning Profiles</strong></p>
-<p>这就是我们最后要生成的 Profiles, 它记录了 App ID, UUID 和其所信任的证书.</p>
-<p>当Xcode要把一个应用部署到真机上时, 会作相应检验:</p>
+        <span itemprop="articleBody"><p>cocoapods的安装需要Ruby环境，特此做个笔记。<br><a id="more"></a></p>
+<h1 id="系统需求">系统需求</h1><p>首先确定操作系统环境，不建议在 Windows 上面搞，所以你需要用:</p>
 <ul>
-<li>Keychain中是否有相匹配的有效证书? </li>
-<li>Profiles是否有效? </li>
-<li>要部署的App的App ID是否与Profiles记录的App ID相匹配?</li>
-<li>UUID是否相匹配?</li>
+<li>Mac OS X </li>
+<li>任意 Linux 发行版本(Ubuntu,CentOS, Redhat, ArchLinux …)</li>
 </ul>
-<p>只有在所有检验都通过了, 才能部署到真机上.</p>
+<pre><code>强烈新手使用 Ubuntu 省掉不必要的麻烦！
+</code></pre><p>以下代码区域，带有 <strong>$</strong> 打头的表示需要在控制台（终端）下面执行（不包括 <strong>$</strong> 符号）</p>
+<h2 id="步骤0_－_安装系统需要的包">步骤0 － 安装系统需要的包</h2><pre><code><span class="preprocessor"># For Mac </span>
+<span class="preprocessor"># 先安装 [Xcode](http://developer.apple.com/xcode/) 开发工具，它将帮你安装好 Unix 环境需要的开发包</span>
+</code></pre><h2 id="步骤1_－_安装_RVM">步骤1 － 安装 RVM</h2><p>RVM 是干什么的这里就不解释了，后面你将会慢慢搞明白。</p>
+<pre><code>$ curl -L <span class="string">https:</span><span class="comment">//get.rvm.io | bash -s stable</span>
+</code></pre><p>期间可能会问你sudo管理员密码，以及自动通过homebrew安装依赖包，等待一段时间后就可以成功安装好 RVM。</p>
+<p>然后，载入 RVM 环境（新开 Termal 就不用这么做了，会自动重新载入的）</p>
+<pre><code><span class="variable">$ </span>source ~<span class="regexp">/.rvm/scripts</span><span class="regexp">/rvm</span>
+</code></pre><p>检查一下是否安装正确</p>
+<pre><code><span class="variable">$ </span>rvm -v
+rvm <span class="number">1.22</span>.<span class="number">17</span> (stable) by <span class="constant">Wayne E.</span> <span class="constant">Seguin </span>&lt;wayneeseguin<span class="variable">@gmail</span>.com&gt;, <span class="constant">Michal Papis </span>&lt;mpapis<span class="variable">@gmail</span>.com&gt; [<span class="symbol">https:</span>/<span class="regexp">/rvm.io/</span>]
+</code></pre><h2 id="步骤2_－_用_RVM_安装_Ruby_环境">步骤2 － 用 RVM 安装 Ruby 环境</h2><pre><code>$ rvm install <span class="number">2.0</span><span class="number">.0</span>
+</code></pre><p>同样继续等待漫长的下载，编译过程，完成以后，Ruby, Ruby Gems 就安装好了。</p>
+<h2 id="步骤3_－_设置_Ruby_版本">步骤3 － 设置 Ruby 版本</h2><p>RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本</p>
+<pre><code>$ rvm <span class="number">2.0</span><span class="number">.0</span> --<span class="keyword">default</span>
+</code></pre><p>同样，也可以用其他版本号，前提是你有用 rvm install 安装过那个版本</p>
+<p>这个时候你可以测试是否正确</p>
+<pre><code>$ ruby -v
+ruby <span class="number">2.0</span><span class="number">.0</span>p247 (<span class="number">2013</span>-<span class="number">06</span>-<span class="number">27</span> revision <span class="number">41674</span>) [x86_64-darwin13<span class="number">.0</span><span class="number">.0</span>]
+
+$ gem -v
+<span class="number">2.1</span><span class="number">.6</span>
+</code></pre><p>这有可能是因为Ruby的默认源使用的是cocoapods.org，国内访问这个网址有时候会有问题，网上的一种解决方案是将远替换成淘宝的，替换方式如下：</p>
+<pre><code><span class="variable">$gem</span> source -r https://rubygems.org/
+<span class="variable">$gem</span> source -a https://ruby.taobao.org
+</code></pre><p> 要想验证是否替换成功了，可以执行：</p>
+<pre><code>$ gem sources <span class="operator">-l</span>  
+</code></pre><p>正常的输出结果：</p>
+<pre><code>CURRENT SOURCES　　　　　　　　　　　　
+<span class="label">http:</span>//ruby.taobao<span class="preprocessor">.org</span>/　　　　　　　　　　　　
+</code></pre><p>到这里就已经把Ruby环境成功的安装到了Mac OS X上，接下来就可以进行相应的开发使用了。</p>
 </span>
       
     </div>
@@ -256,11 +288,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/certificates/" rel="tag">#certificates</a>
-          
-            <a href="/tags/developer/" rel="tag">#developer</a>
-          
             <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+            <a href="/tags/mac/" rel="tag">#mac</a>
+          
+            <a href="/tags/ruby/" rel="tag">#ruby</a>
           
         </div>
       
@@ -269,13 +301,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/17/在Mac安装Ruby指南/" rel="prev">在Mac安装Ruby指南</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/14/markdown-语法大全/" rel="next">markdown 语法大全</a>
+              <a href="/2015/08/16/关于iOS证书那些事/" rel="next">关于iOS证书那些事</a>
             
           </div>
         </div>
@@ -300,8 +330,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/16/关于iOS证书那些事/"
-                   data-title="关于iOS证书那些事" data-url="https://www.flyinlight.com/2015/08/16/关于iOS证书那些事/">
+              <div class="ds-thread" data-thread-key="2015/08/17/在Mac安装Ruby指南/"
+                   data-title="在Mac安装Ruby指南" data-url="https://www.flyinlight.com/2015/08/17/在Mac安装Ruby指南/">
               </div>
             
           </div>
@@ -389,7 +419,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#相关基础"><span class="nav-number">1.</span> <span class="nav-text">相关基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Xcode相关名词"><span class="nav-number">1.1.</span> <span class="nav-text">Xcode相关名词</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#系统需求"><span class="nav-number">1.</span> <span class="nav-text">系统需求</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤0_－_安装系统需要的包"><span class="nav-number">1.1.</span> <span class="nav-text">步骤0 － 安装系统需要的包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤1_－_安装_RVM"><span class="nav-number">1.2.</span> <span class="nav-text">步骤1 － 安装 RVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤2_－_用_RVM_安装_Ruby_环境"><span class="nav-number">1.3.</span> <span class="nav-text">步骤2 － 用 RVM 安装 Ruby 环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤3_－_设置_Ruby_版本"><span class="nav-number">1.4.</span> <span class="nav-text">步骤3 － 设置 Ruby 版本</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

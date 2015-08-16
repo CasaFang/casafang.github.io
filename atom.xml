@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.flyinlight.com/"/>
-  <updated>2015-08-16T14:11:07.000Z</updated>
+  <updated>2015-08-16T17:06:15.000Z</updated>
   <id>https://www.flyinlight.com/</id>
   
   <author>
@@ -15,14 +15,76 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[在Mac安装Ruby指南]]></title>
+    <link href="https://www.flyinlight.com/2015/08/17/%E5%9C%A8Mac%E5%AE%89%E8%A3%85Ruby%E6%8C%87%E5%8D%97/"/>
+    <id>https://www.flyinlight.com/2015/08/17/在Mac安装Ruby指南/</id>
+    <published>2015-08-16T16:51:45.000Z</published>
+    <updated>2015-08-16T17:06:15.000Z</updated>
+    <content type="html"><![CDATA[<p>cocoapods的安装需要Ruby环境，特此做个笔记。<br><a id="more"></a></p>
+<h1 id="系统需求">系统需求</h1><p>首先确定操作系统环境，不建议在 Windows 上面搞，所以你需要用:</p>
+<ul>
+<li>Mac OS X </li>
+<li>任意 Linux 发行版本(Ubuntu,CentOS, Redhat, ArchLinux …)</li>
+</ul>
+<pre><code>强烈新手使用 Ubuntu 省掉不必要的麻烦！
+</code></pre><p>以下代码区域，带有 <strong>$</strong> 打头的表示需要在控制台（终端）下面执行（不包括 <strong>$</strong> 符号）</p>
+<h2 id="步骤0_－_安装系统需要的包">步骤0 － 安装系统需要的包</h2><pre><code><span class="preprocessor"># For Mac </span>
+<span class="preprocessor"># 先安装 [Xcode](http://developer.apple.com/xcode/) 开发工具，它将帮你安装好 Unix 环境需要的开发包</span>
+</code></pre><h2 id="步骤1_－_安装_RVM">步骤1 － 安装 RVM</h2><p>RVM 是干什么的这里就不解释了，后面你将会慢慢搞明白。</p>
+<pre><code>$ curl -L <span class="string">https:</span><span class="comment">//get.rvm.io | bash -s stable</span>
+</code></pre><p>期间可能会问你sudo管理员密码，以及自动通过homebrew安装依赖包，等待一段时间后就可以成功安装好 RVM。</p>
+<p>然后，载入 RVM 环境（新开 Termal 就不用这么做了，会自动重新载入的）</p>
+<pre><code><span class="variable">$ </span>source ~<span class="regexp">/.rvm/scripts</span><span class="regexp">/rvm</span>
+</code></pre><p>检查一下是否安装正确</p>
+<pre><code><span class="variable">$ </span>rvm -v
+rvm <span class="number">1.22</span>.<span class="number">17</span> (stable) by <span class="constant">Wayne E.</span> <span class="constant">Seguin </span>&lt;wayneeseguin<span class="variable">@gmail</span>.com&gt;, <span class="constant">Michal Papis </span>&lt;mpapis<span class="variable">@gmail</span>.com&gt; [<span class="symbol">https:</span>/<span class="regexp">/rvm.io/</span>]
+</code></pre><h2 id="步骤2_－_用_RVM_安装_Ruby_环境">步骤2 － 用 RVM 安装 Ruby 环境</h2><pre><code>$ rvm install <span class="number">2.0</span><span class="number">.0</span>
+</code></pre><p>同样继续等待漫长的下载，编译过程，完成以后，Ruby, Ruby Gems 就安装好了。</p>
+<h2 id="步骤3_－_设置_Ruby_版本">步骤3 － 设置 Ruby 版本</h2><p>RVM 装好以后，需要执行下面的命令将指定版本的 Ruby 设置为系统默认版本</p>
+<pre><code>$ rvm <span class="number">2.0</span><span class="number">.0</span> --<span class="keyword">default</span>
+</code></pre><p>同样，也可以用其他版本号，前提是你有用 rvm install 安装过那个版本</p>
+<p>这个时候你可以测试是否正确</p>
+<pre><code>$ ruby -v
+ruby <span class="number">2.0</span><span class="number">.0</span>p247 (<span class="number">2013</span>-<span class="number">06</span>-<span class="number">27</span> revision <span class="number">41674</span>) [x86_64-darwin13<span class="number">.0</span><span class="number">.0</span>]
+
+$ gem -v
+<span class="number">2.1</span><span class="number">.6</span>
+</code></pre><p>这有可能是因为Ruby的默认源使用的是cocoapods.org，国内访问这个网址有时候会有问题，网上的一种解决方案是将远替换成淘宝的，替换方式如下：</p>
+<pre><code><span class="variable">$gem</span> source -r https://rubygems.org/
+<span class="variable">$gem</span> source -a https://ruby.taobao.org
+</code></pre><p> 要想验证是否替换成功了，可以执行：</p>
+<pre><code>$ gem sources <span class="operator">-l</span>  
+</code></pre><p>正常的输出结果：</p>
+<pre><code>CURRENT SOURCES　　　　　　　　　　　　
+<span class="label">http:</span>//ruby.taobao<span class="preprocessor">.org</span>/　　　　　　　　　　　　
+</code></pre><p>到这里就已经把Ruby环境成功的安装到了Mac OS X上，接下来就可以进行相应的开发使用了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>cocoapods的安装需要Ruby环境，特此做个笔记。<br>]]>
+    
+    </summary>
+    
+      <category term="iOS" scheme="https://www.flyinlight.com/tags/iOS/"/>
+    
+      <category term="mac" scheme="https://www.flyinlight.com/tags/mac/"/>
+    
+      <category term="ruby" scheme="https://www.flyinlight.com/tags/ruby/"/>
+    
+      <category term="mac" scheme="https://www.flyinlight.com/categories/mac/"/>
+    
+      <category term="ruby" scheme="https://www.flyinlight.com/categories/mac/ruby/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[关于iOS证书那些事]]></title>
     <link href="https://www.flyinlight.com/2015/08/16/%E5%85%B3%E4%BA%8EiOS%E8%AF%81%E4%B9%A6%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
     <id>https://www.flyinlight.com/2015/08/16/关于iOS证书那些事/</id>
     <published>2015-08-16T13:49:25.000Z</published>
-    <updated>2015-08-16T14:11:07.000Z</updated>
+    <updated>2015-08-16T17:07:39.000Z</updated>
     <content type="html"><![CDATA[<p>作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。<br><a id="more"></a></p>
-<h2 id="#相关基础">#相关基础</h2><p>##Xcode相关名词</p>
-<p><strong>Keychain</strong></p>
+<h1 id="相关基础">相关基础</h1><hr>
+<h2 id="Xcode相关名词">Xcode相关名词</h2><p><strong>Keychain</strong></p>
 <p>MAC下用于存储和管理密钥等私密信息的工具.</p>
 <p><strong>Identifiers / Bundle ID / App ID</strong></p>
 <p>这是应用的唯一标识.</p>
