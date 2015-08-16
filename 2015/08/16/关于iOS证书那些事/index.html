@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="certificates,developer,iOS," />
 
 
 
@@ -37,15 +37,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="有梦为马,随处可栖.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FLY in Light">
-<meta property="og:url" content="https://www.flyinlight.com/index.html">
+<meta name="description" content="作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于iOS证书那些事">
+<meta property="og:url" content="https://www.flyinlight.com/2015/08/16/关于iOS证书那些事/index.html">
 <meta property="og:site_name" content="FLY in Light">
-<meta property="og:description" content="有梦为马,随处可栖.">
+<meta property="og:description" content="作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。">
+<meta property="og:image" content="https://www.flyinlight.com/-/images/iOS.jpg">
+<meta property="og:updated_time" content="2015-08-16T14:11:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FLY in Light">
-<meta name="twitter:description" content="有梦为马,随处可栖.">
+<meta name="twitter:title" content="关于iOS证书那些事">
+<meta name="twitter:description" content="作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -55,7 +57,7 @@
   };
 </script>
 
-  <title> FLY in Light </title>
+  <title> 关于iOS证书那些事 | FLY in Light </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -73,9 +75,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -151,9 +151,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -164,9 +164,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/08/16/关于iOS证书那些事/" itemprop="url">
-                关于iOS证书那些事
-              </a>
+              关于iOS证书那些事
             
           
         </h1>
@@ -232,258 +230,79 @@
       
 
       
-        
-          <p>作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/08/16/关于iOS证书那些事/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <span itemprop="articleBody"><p>作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。<br><a id="more"></a></p>
+<h2 id="#相关基础">#相关基础</h2><p>##Xcode相关名词</p>
+<p><strong>Keychain</strong></p>
+<p>MAC下用于存储和管理密钥等私密信息的工具.</p>
+<p><strong>Identifiers / Bundle ID / App ID</strong></p>
+<p>这是应用的唯一标识.</p>
+<p><strong>Device UUID</strong></p>
+<p>这是设备的唯一标识.</p>
+<p><strong>Provisioning Profiles</strong></p>
+<p>这就是我们最后要生成的 Profiles, 它记录了 App ID, UUID 和其所信任的证书.</p>
+<p>当Xcode要把一个应用部署到真机上时, 会作相应检验:</p>
+<ul>
+<li>Keychain中是否有相匹配的有效证书? </li>
+<li>Profiles是否有效? </li>
+<li>要部署的App的App ID是否与Profiles记录的App ID相匹配?</li>
+<li>UUID是否相匹配?</li>
+</ul>
+<p>只有在所有检验都通过了, 才能部署到真机上.</p>
+</span>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
+        <div class="post-tags">
           
+            <a href="/tags/certificates/" rel="tag">#certificates</a>
           
+            <a href="/tags/developer/" rel="tag">#developer</a>
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
             
-              <a class="post-title-link" href="/2015/08/14/markdown-语法大全/" itemprop="url">
-                markdown 语法大全
-              </a>
+          </div>
+
+          <div class="post-nav-next post-nav-item">
             
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-08-14T12:29:23+08:00" content="2015-08-14">
-            2015-08-14
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+              <a href="/2015/08/14/markdown-语法大全/" rel="next">markdown 语法大全</a>
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/hexo/" itemprop="url" rel="index">
-                  <span itemprop="name">hexo</span>
-                </a>
-              </span>
-
-              
-              
-                ， 
-              
-
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/hexo/markdown/" itemprop="url" rel="index">
-                  <span itemprop="name">markdown</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/08/14/markdown-语法大全/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/14/markdown-语法大全/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="/images/markdown.jpg" rel="gallery_cideqavy9000iaws6ry0c3o2q"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/images/markdown.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
           </div>
         </div>
       
 
       
-        
-          <p>Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。[1]这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。<br>——维基百科<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/08/14/markdown-语法大全/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/08/13/hexo-3-0搭建笔记/" itemprop="url">
-                hexo 3.0搭建笔记
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-08-13T21:01:16+08:00" content="2015-08-13">
-            2015-08-13
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/hexo/" itemprop="url" rel="index">
-                  <span itemprop="name">hexo</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/08/13/hexo-3-0搭建笔记/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/13/hexo-3-0搭建笔记/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="/images/hexo.jpg" rel="gallery_cideqavxl0000aws644oea3aa"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/images/hexo.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          <p>一直想抽时间搭建一个自己的Hexo博客，苦于没有时间。今天这个念头又冒了出来，于是抽了些时间搭建了这个博客。作为一枚爱写文又追求逼格的程序猿，hexo的风格我非常喜欢。那么新博的第一篇就献给它。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/08/13/hexo-3-0搭建笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
+  </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
  </div>
 
         
 
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/08/16/关于iOS证书那些事/"
+                   data-title="关于iOS证书那些事" data-url="https://www.flyinlight.com/2015/08/16/关于iOS证书那些事/">
+              </div>
+            
+          </div>
         
       </div>
 
@@ -500,6 +319,15 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <section class="site-overview">
@@ -553,6 +381,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="##相关基础"><span class="nav-number">1.</span> <span class="nav-text">#相关基础</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
       
 
     </div>
@@ -640,6 +479,165 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {

@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.flyinlight.com/"/>
-  <updated>2015-08-14T05:09:35.000Z</updated>
+  <updated>2015-08-16T14:11:07.000Z</updated>
   <id>https://www.flyinlight.com/</id>
   
   <author>
@@ -13,6 +13,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[关于iOS证书那些事]]></title>
+    <link href="https://www.flyinlight.com/2015/08/16/%E5%85%B3%E4%BA%8EiOS%E8%AF%81%E4%B9%A6%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>https://www.flyinlight.com/2015/08/16/关于iOS证书那些事/</id>
+    <published>2015-08-16T13:49:25.000Z</published>
+    <updated>2015-08-16T14:11:07.000Z</updated>
+    <content type="html"><![CDATA[<p>作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。<br><a id="more"></a></p>
+<h2 id="#相关基础">#相关基础</h2><p>##Xcode相关名词</p>
+<p><strong>Keychain</strong></p>
+<p>MAC下用于存储和管理密钥等私密信息的工具.</p>
+<p><strong>Identifiers / Bundle ID / App ID</strong></p>
+<p>这是应用的唯一标识.</p>
+<p><strong>Device UUID</strong></p>
+<p>这是设备的唯一标识.</p>
+<p><strong>Provisioning Profiles</strong></p>
+<p>这就是我们最后要生成的 Profiles, 它记录了 App ID, UUID 和其所信任的证书.</p>
+<p>当Xcode要把一个应用部署到真机上时, 会作相应检验:</p>
+<ul>
+<li>Keychain中是否有相匹配的有效证书? </li>
+<li>Profiles是否有效? </li>
+<li>要部署的App的App ID是否与Profiles记录的App ID相匹配?</li>
+<li>UUID是否相匹配?</li>
+</ul>
+<p>只有在所有检验都通过了, 才能部署到真机上.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。<br>]]>
+    
+    </summary>
+    
+      <category term="certificates" scheme="https://www.flyinlight.com/tags/certificates/"/>
+    
+      <category term="developer" scheme="https://www.flyinlight.com/tags/developer/"/>
+    
+      <category term="iOS" scheme="https://www.flyinlight.com/tags/iOS/"/>
+    
+      <category term="iOS" scheme="https://www.flyinlight.com/categories/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[markdown 语法大全]]></title>
