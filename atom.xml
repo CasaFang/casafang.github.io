@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="https://www.flyinlight.com/"/>
-  <updated>2015-08-16T17:06:15.000Z</updated>
+  <updated>2015-08-18T15:45:42.000Z</updated>
   <id>https://www.flyinlight.com/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[在Mac安装Ruby指南]]></title>
-    <link href="https://www.flyinlight.com/2015/08/17/%E5%9C%A8Mac%E5%AE%89%E8%A3%85Ruby%E6%8C%87%E5%8D%97/"/>
-    <id>https://www.flyinlight.com/2015/08/17/在Mac安装Ruby指南/</id>
-    <published>2015-08-16T16:51:45.000Z</published>
-    <updated>2015-08-16T17:06:15.000Z</updated>
+    <link href="https://www.flyinlight.com/2015/08/16/%E5%9C%A8Mac%E5%AE%89%E8%A3%85Ruby%E6%8C%87%E5%8D%97/"/>
+    <id>https://www.flyinlight.com/2015/08/16/在Mac安装Ruby指南/</id>
+    <published>2015-08-15T16:51:45.000Z</published>
+    <updated>2015-08-18T15:45:42.000Z</updated>
     <content type="html"><![CDATA[<p>cocoapods的安装需要Ruby环境，特此做个笔记。<br><a id="more"></a></p>
 <h1 id="系统需求">系统需求</h1><p>首先确定操作系统环境，不建议在 Windows 上面搞，所以你需要用:</p>
 <ul>
@@ -78,10 +78,10 @@ $ gem -v
   
   <entry>
     <title><![CDATA[关于iOS证书那些事]]></title>
-    <link href="https://www.flyinlight.com/2015/08/16/%E5%85%B3%E4%BA%8EiOS%E8%AF%81%E4%B9%A6%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
-    <id>https://www.flyinlight.com/2015/08/16/关于iOS证书那些事/</id>
-    <published>2015-08-16T13:49:25.000Z</published>
-    <updated>2015-08-18T14:23:50.000Z</updated>
+    <link href="https://www.flyinlight.com/2015/08/15/%E5%85%B3%E4%BA%8EiOS%E8%AF%81%E4%B9%A6%E9%82%A3%E4%BA%9B%E4%BA%8B/"/>
+    <id>https://www.flyinlight.com/2015/08/15/关于iOS证书那些事/</id>
+    <published>2015-08-15T13:49:25.000Z</published>
+    <updated>2015-08-18T15:45:35.000Z</updated>
     <content type="html"><![CDATA[<p>作为一名iOS开发者，开发者账号和iOS真机测试证书那些事，都是每个开发者必经的痛并快乐着的路。作为android开发者，可以方便的邀请小伙伴测试，但是作为一名iOS开发者，却要苦逼的向小伙伴要UDID，生成新的证书，才能完成测试。<br><a id="more"></a></p>
 <h1 id="相关基础">相关基础</h1><hr>
 <h2 id="Xcode相关名词">Xcode相关名词</h2><p><strong>Keychain</strong></p>
