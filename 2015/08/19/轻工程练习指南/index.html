@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="CocoaPods,iOS," />
+  <meta name="keywords" content="iOS," />
 
 
 
@@ -37,38 +37,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="在iOS的开发中，难免会使用大量的第三方的开源库，从前的使用这些库的方式是：
-
-下载开源库的源代码并引入工程
-向工程中添加开源库使用到的framework
-解决开源库和开源库以及开源库和工程之间的依赖关系、检查重复添加的framework等问题
-如果开源库有更新的时候，还需要将工程中使用的开源库删除，重新执行前面的三个步骤，顿时头都大了。。。
-
-自从有了CocoaPods以后，这些繁杂的工作就不再">
+<meta name="description" content="在此记录一下好的轻工程开发流程。希望可以坚持下去，然后养成良好的编程习惯，以此提高自己的编程效率。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CocoaPods安装和使用教程">
-<meta property="og:url" content="https://www.flyinlight.com/2015/08/17/CocoaPods安装和使用教程/index.html">
+<meta property="og:title" content="轻工程练习指南">
+<meta property="og:url" content="https://www.flyinlight.com/2015/08/19/轻工程练习指南/index.html">
 <meta property="og:site_name" content="FLY in Light">
-<meta property="og:description" content="在iOS的开发中，难免会使用大量的第三方的开源库，从前的使用这些库的方式是：
-
-下载开源库的源代码并引入工程
-向工程中添加开源库使用到的framework
-解决开源库和开源库以及开源库和工程之间的依赖关系、检查重复添加的framework等问题
-如果开源库有更新的时候，还需要将工程中使用的开源库删除，重新执行前面的三个步骤，顿时头都大了。。。
-
-自从有了CocoaPods以后，这些繁杂的工作就不再">
-<meta property="og:image" content="http://7xl71o.com1.z0.glb.clouddn.com/Cocoapods.jpg">
-<meta property="og:updated_time" content="2015-08-18T16:09:49.000Z">
+<meta property="og:description" content="在此记录一下好的轻工程开发流程。希望可以坚持下去，然后养成良好的编程习惯，以此提高自己的编程效率。">
+<meta property="og:image" content="http://7xl71o.com1.z0.glb.clouddn.com/programmer.jpg">
+<meta property="og:updated_time" content="2015-08-19T15:18:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CocoaPods安装和使用教程">
-<meta name="twitter:description" content="在iOS的开发中，难免会使用大量的第三方的开源库，从前的使用这些库的方式是：
-
-下载开源库的源代码并引入工程
-向工程中添加开源库使用到的framework
-解决开源库和开源库以及开源库和工程之间的依赖关系、检查重复添加的framework等问题
-如果开源库有更新的时候，还需要将工程中使用的开源库删除，重新执行前面的三个步骤，顿时头都大了。。。
-
-自从有了CocoaPods以后，这些繁杂的工作就不再">
+<meta name="twitter:title" content="轻工程练习指南">
+<meta name="twitter:description" content="在此记录一下好的轻工程开发流程。希望可以坚持下去，然后养成良好的编程习惯，以此提高自己的编程效率。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -78,7 +57,7 @@
   };
 </script>
 
-  <title> CocoaPods安装和使用教程 | FLY in Light </title>
+  <title> 轻工程练习指南 | FLY in Light </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -185,7 +164,7 @@
           
           
             
-              CocoaPods安装和使用教程
+              轻工程练习指南
             
           
         </h1>
@@ -194,8 +173,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-08-17T23:49:00+08:00" content="2015-08-17">
-            2015-08-17
+          <time itemprop="dateCreated" datetime="2015-08-19T22:54:09+08:00" content="2015-08-19">
+            2015-08-19
           </time>
         </span>
 
@@ -220,8 +199,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/08/17/CocoaPods安装和使用教程/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/17/CocoaPods安装和使用教程/" itemprop="commentsCount"></span>
+              <a href="/2015/08/19/轻工程练习指南/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/19/轻工程练习指南/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -238,9 +217,9 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://7xl71o.com1.z0.glb.clouddn.com/Cocoapods.jpg" rel="gallery_cidixczne0000hvs6j9lypox4"
+                 href="http://7xl71o.com1.z0.glb.clouddn.com/programmer.jpg" rel="gallery_cidixczo90009hvs6zg0c5nr6"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://7xl71o.com1.z0.glb.clouddn.com/Cocoapods.jpg" itemprop="contentUrl"/>
+                <img src="http://7xl71o.com1.z0.glb.clouddn.com/programmer.jpg" itemprop="contentUrl"/>
               </a>
             
           
@@ -251,35 +230,54 @@
       
 
       
-        <span itemprop="articleBody"><p>在iOS的开发中，难免会使用大量的第三方的开源库，从前的使用这些库的方式是：</p>
+        <span itemprop="articleBody"><p>在此记录一下好的轻工程开发流程。希望可以坚持下去，然后养成良好的编程习惯，以此提高自己的编程效率。<br><a id="more"></a></p>
+<h1 id="一、轻文档先行">一、轻文档先行</h1><hr>
+<p>什么叫轻文档？其实轻文档指的是不需要按照标准的软件工程知识来编写需求分析，架构设计，模块设计，流程图时序图等文档，而是采用比较自由的方式，把你要做的事情，还有做事情的步骤描述清楚的文档。这样的文档不需要限制格式，甚至你可以手写在自己的笔记本上面，只要自己能看得懂，在开发过程中能够随时查阅就可以了。</p>
+<h2 id="1-_为什么要写文档">1. 为什么要写文档</h2><p>刚开始工作的时候，总是一接到任务就马上开始写代码，结果遇到了很多问题，例如：</p>
 <ol>
-<li>下载开源库的源代码并引入工程</li>
-<li>向工程中添加开源库使用到的framework</li>
-<li>解决开源库和开源库以及开源库和工程之间的依赖关系、检查重复添加的framework等问题</li>
-<li>如果开源库有更新的时候，还需要将工程中使用的开源库删除，重新执行前面的三个步骤，顿时头都大了。。。</li>
+<li>需求本身就存在问题，代码写到一半以后才发现</li>
+<li>部分需求没有表达清楚，发现的时候才去沟通，结果发现时间不够，或者跟之前的代码产生冲突</li>
+<li>代码写到一半时，发现自己思路不对或者不清晰了<br>最后很有可能导致项目延期。</li>
 </ol>
-<p>自从有了CocoaPods以后，这些繁杂的工作就不再需要我们亲力亲为了，只需要我们做好少量的配置工作，CocoaPods会为我们做好一切！<br><a id="more"></a></p>
-<h1 id="CocoaPods是什么？">CocoaPods是什么？</h1><hr>
-<p>当你开发iOS应用时，会经常使用到很多第三方开源类库，比如JSONKit，AFNetWorking等等。可能某个类库又用到其他类库，所以要使用它，必须得另外下载其他类库，而其他类库又用到其他类库，“子子孙孙无穷尽也”，这也许是比较特殊的情况。总之小编的意思就是，手动一个个去下载所需类库十分麻烦。另外一种常见情况是，你项目中用到的类库有更新，你必须得重新下载新版本，重新加入到项目中，十分麻烦。如果能有什么工具能解决这些恼人的问题，那将“善莫大焉”。所以，你需要 CocoaPods。</p>
-<p>CocoaPods应该是iOS最常用最有名的类库管理工具了，上述两个烦人的问题，通过cocoaPods，只需要一行命令就可以完全解决，当然前提是你必须正确设置它。重要的是，绝大部分有名的开源类库，都支持CocoaPods。所以，作为iOS程序员的我们，掌握CocoaPods的使用是必不可少的基本技能了。</p>
-<h1 id="如何下载和安装CocoaPods？">如何下载和安装CocoaPods？</h1><hr>
-<p>在安装CocoaPods之前，首先要在本地安装好Ruby环境。可参考上一篇博文。</p>
-<p>假如你在本地已经安装好Ruby环境，那么下载和安装CocoaPods将十分简单，只需要一行命令。</p>
-<pre><code>sudo gem <span class="keyword">install</span> cocoapods
-</code></pre><p>但是，且慢。如果你在天朝，在终端中敲入这个命令之后，会发现半天没有任何反应。原因无他，因为那堵墙阻挡了cocoapods.org。</p>
-<p>但是，是的，又但是（不过是个可喜的“但是”）。我们可以用淘宝的Ruby镜像来访问cocoapods。按照下面的顺序在终端中敲入依次敲入命令：</p>
-<pre><code>$ gem sources --remove <span class="string">https:</span><span class="comment">//rubygems.org/</span>
-<span class="comment">//等有反应之后再敲入以下命令</span>
-$ gem sources -a <span class="string">http:</span><span class="comment">//ruby.taobao.org/</span>
-</code></pre><p>为了验证你的Ruby镜像是并且仅是taobao，可以用以下命令查看：</p>
-<pre><code>$ gem sources <span class="operator">-l</span>
-</code></pre><p>只有在终端中出现下面文字才表明你上面的命令是成功的：</p>
-<pre><code><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span> CURRENT SOURCES <span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>
-
-http://ruby.taobao.org/
-</code></pre><p>这时候，你再次在终端中运行：</p>
-<pre><code>$ sudo gem <span class="keyword">install</span> cocoapods
-</code></pre><p>等上十几秒钟，CocoaPods就可以在你本地下载并且安装好了，不再需要其他设置。</p>
+<p>如果在开发前就把需求分解好，把问题沟通清楚，把要做的点一个个列下来，就能大大地避免这些问题.</p>
+<h2 id="2-_文档写什么">2. 文档写什么</h2><h3 id="①-_准备工作">①. 准备工作</h3><p>在开始之前需要准备什么？例如做一个发送消息的界面，需要有以下的准备：<br>    a. 接口协议<br>    b. 测试环境<br>    c. 测试账号</p>
+<p>准备工作提前做好，往往会加快效率。为什么要把这些内容记录下来，是为了在开发过程中可以快速检索。如果等到开始开发以后再去查聊天记录，或者是找相关人员询问，那就慢了。</p>
+<h3 id="②-_罗列需要做的小功能点">②. 罗列需要做的小功能点</h3><p>例如做一个发送消息的界面，就有很多小功能点：<br>    a. 发送界面<br>    b. 发送的数据接口<br>    c. 文本字数限制</p>
+<p>如果你仔细一想，可能还会出现以下问题：<br>    a. 是否需要登录？如果未登录，是否要引导登录<br>    b. 对于发送失败的情况，要如何处理？<br>    c. 字数超出限制时，如何交互？<br>    d. 用户重复发相同的文本，是否要过滤？<br>    e. 如何处理数据接口的错误码？</p>
+<p>当你记录下这些小功能，并且跟产品经理沟通清楚以后，你的开发周期已经可以初步评估了，并且这时候也已经弄清楚这个需求有多少小功能，需要怎么划分模块，怎么构建内部流程。</p>
+<p>对于部分流程复杂的功能，可以画一下流程图辅助理解</p>
+<h3 id="③-_记录这个需求的改动点">③. 记录这个需求的改动点</h3><p>如果这是一个新需求，并且跟以前的版本没有任何关系，则可以忽略这部分<br>如果是这个需求会影响以前的代码，则需要将改动部分记录下来，因为项目中的 bug 有很多是改出来的，列出改动点后会让自己更清楚新功能带来的影响，减少很多低级bug</p>
+<p>例如新增一个发送图片的功能，这个功能会影响聊天窗口的展示，会影响键盘，这些改动点就要记录下来。一来可以辅助思考有没有漏掉的小功能点，二来在自测试的时候需要覆盖聊天窗口的展示和键盘的切换。</p>
+<h3 id="④-_罗列自测试内容">④. 罗列自测试内容</h3><p>编码完成以后，一定要进行自测试，自测试越仔细，越能提前发现 bug 并修复。如果是测试人员发现了 bug ，然后再提交给你，你这时候再去解决，效率往往会比较低。</p>
+<p>以发送消息为例，自测内容也有很多：<br>    a. 正常发送消息<br>    b. 未登录时点击发送<br>    c. 字数超出限制<br>    d. 没有网络时点发送<br>    e. 网络很差时不断点发送<br>    等等…….</p>
+<h1 id="二、开始编码">二、开始编码</h1><hr>
+<h2 id="1-_是重写还是保持不变">1. 是重写还是保持不变</h2><p>每做一个新需求，都有可能会面临这样的问题：<br>①. 以前的模块写得太烂了，很想重新写<br>②. 差不多的需求，以前用了这样的方式实现，这次想换一种方式实现</p>
+<p>会考虑以上的问题，证明你是一个想要不断进步的人，但是，在做决定之前最好先考虑以下因素：<br>①. 重写模块，很可能牵一发而动全身，要想清楚改动可能带来的影响，以及解决这些问题需要的时间<br>②. 使用新方案实现需求，新的方案是否已经经过仔细的验证，如果没有，它可能会带来新问题</p>
+<p>其实保持不变也有一些优势：<br>①. 可以比之前做得更快，因为你熟悉了<br>②. 不会出现新问题</p>
+<p>考虑好以后，是重写还是保持现状，基本已经有答案了<br>不过保持现状并不意味着是放弃追求，你可以用业余的时间来证明你的方案，当它已经稳定了，可行了，那你随时都可以重写了。</p>
+<h2 id="2-_实现需求，Demo_先行">2. 实现需求，Demo 先行</h2><p>用 Demo 来实现一个需求是最快的，因为它运行快，可以随意修改，而且代码量少，如果实现过程出现问题，很容易就可以定位到原因。</p>
+<p>先建立一个 Demo，然后把需要的资源移植过来，把功能实现以后，再移植到项目中，这样可以节省不少开发时间</p>
+<h2 id="3-_借助工具">3. 借助工具</h2><h3 id="①-_代码模板（File_Template）">①. 代码模板（File Template）</h3><p>我们创建一个视图，控制器，或者一个 Model，可能会有一些固定不变的函数、属性需要被定义或者重写，使用 Xcode 可以创建代码模板，在创建类文件的时候一键生成这些代码，提高效率。</p>
+<h3 id="②-_代码片段（Code_Snippet）">②. 代码片段（Code Snippet）</h3><p>一般可重用的代码，我们会封装成类或者函数，以便其他地方使用，但有一些代码是不适合封装的，例如：<br>    a. 声明一个属性<br>    b. 创建一个线程</p>
+<p>像这类的代码，我会做成代码片段，然后通过 Xcode 的 Code Snippet 自动补充功能来快速完成，一个代码片段例子：</p>
+<p><img src="http://7xl71o.com1.z0.glb.clouddn.com/CodeSnippet.jpg" alt="Code Snippet"></p>
+<p>只要输入 @OperateThread 就可以直接完成创建一个操作队列的代码，大幅度减少编码时间。</p>
+<h3 id="③-_自动注释工具（VVDocumenter）">③. 自动注释工具（VVDocumenter）</h3><p>一个可以一键创建注释模板的工具，减少写注释所需的时间</p>
+<h2 id="4-_适当添加注释">4. 适当添加注释</h2><p>如果像官方的 API 那样，所有地方都添加注释，那工作量就太大了，需要额外的开发时间，如果只是针对一些语义不明、有歧义的代码添加注释，反而会减少开发时间。</p>
+<p>例如一个属性：</p>
+<pre><code><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) int64_t createTime;
+</code></pre><p>一看就知道是指创建时间，但它到底是不是时间戳？如果是时间戳，那单位是秒还是毫秒？如果还要打印数据以后才能下结论，就太耗时间了。</p>
+<p>加上注释以后，它就一目了然了</p>
+<pre><code><span class="comment">// 创建时间（时间戳 秒）</span>
+<span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) int64_t createTime;
+</code></pre><h1 id="三、自测">三、自测</h1><hr>
+<h2 id="1-_先检查后自测">1. 先检查后自测</h2><p>完成一个小功能以后，先检查一下代码，然后再开始自测，因为代码可以告诉你很多信息：<br>①. 是否有低级错误<br>②. 是否有难以发现的漏洞<br>③. 流程是否存在问题</p>
+<p>如果你编码完成以后立即自测，可能会进入被动状态：<br>①. 这个界面显示不对<br>②. 这个数据跟预期对不上<br>③. 有些不该出现的东西出现了</p>
+<p>这时候再反过来去调试代码，一步步修改，会很慢，因为你编译和操作都需要时间，而且有些条件不是很容易模拟，那种情况就更耗时间了</p>
+<h2 id="2-_自测点要全部过一遍">2. 自测点要全部过一遍</h2><p>可能你会觉得这很烦，很浪费程序员的时间，但自测过程发现 bug 是最容易修复的，因为这时候代码记忆最清晰，最容易找到问题所在。</p>
+<h1 id="四、总结">四、总结</h1><hr>
+<p>先用文档理清思路，然后开始编码，编码完成以后要检查代码并自测。这就是我的编程习惯，一直沿用至今。</p>
+<p>其实知道一个技巧，并不会提升效率，只有坚持使用这个技巧，并形成习惯以后，才会真正地提高效率。</p>
 </span>
       
     </div>
@@ -287,8 +285,6 @@ http://ruby.taobao.org/
     <footer class="post-footer">
       
         <div class="post-tags">
-          
-            <a href="/tags/CocoaPods/" rel="tag">#CocoaPods</a>
           
             <a href="/tags/iOS/" rel="tag">#iOS</a>
           
@@ -299,13 +295,11 @@ http://ruby.taobao.org/
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/08/19/轻工程练习指南/" rel="prev">轻工程练习指南</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/16/在Mac安装Ruby指南/" rel="next">在Mac安装Ruby指南</a>
+              <a href="/2015/08/17/CocoaPods安装和使用教程/" rel="next">CocoaPods安装和使用教程</a>
             
           </div>
         </div>
@@ -330,8 +324,8 @@ http://ruby.taobao.org/
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/08/17/CocoaPods安装和使用教程/"
-                   data-title="CocoaPods安装和使用教程" data-url="https://www.flyinlight.com/2015/08/17/CocoaPods安装和使用教程/">
+              <div class="ds-thread" data-thread-key="2015/08/19/轻工程练习指南/"
+                   data-title="轻工程练习指南" data-url="https://www.flyinlight.com/2015/08/19/轻工程练习指南/">
               </div>
             
           </div>
@@ -419,7 +413,7 @@ http://ruby.taobao.org/
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CocoaPods是什么？"><span class="nav-number">1.</span> <span class="nav-text">CocoaPods是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何下载和安装CocoaPods？"><span class="nav-number">2.</span> <span class="nav-text">如何下载和安装CocoaPods？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、轻文档先行"><span class="nav-number">1.</span> <span class="nav-text">一、轻文档先行</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_为什么要写文档"><span class="nav-number">1.1.</span> <span class="nav-text">1. 为什么要写文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_文档写什么"><span class="nav-number">1.2.</span> <span class="nav-text">2. 文档写什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#①-_准备工作"><span class="nav-number">1.2.1.</span> <span class="nav-text">①. 准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#②-_罗列需要做的小功能点"><span class="nav-number">1.2.2.</span> <span class="nav-text">②. 罗列需要做的小功能点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#③-_记录这个需求的改动点"><span class="nav-number">1.2.3.</span> <span class="nav-text">③. 记录这个需求的改动点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#④-_罗列自测试内容"><span class="nav-number">1.2.4.</span> <span class="nav-text">④. 罗列自测试内容</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、开始编码"><span class="nav-number">2.</span> <span class="nav-text">二、开始编码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_是重写还是保持不变"><span class="nav-number">2.1.</span> <span class="nav-text">1. 是重写还是保持不变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_实现需求，Demo_先行"><span class="nav-number">2.2.</span> <span class="nav-text">2. 实现需求，Demo 先行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-_借助工具"><span class="nav-number">2.3.</span> <span class="nav-text">3. 借助工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#①-_代码模板（File_Template）"><span class="nav-number">2.3.1.</span> <span class="nav-text">①. 代码模板（File Template）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#②-_代码片段（Code_Snippet）"><span class="nav-number">2.3.2.</span> <span class="nav-text">②. 代码片段（Code Snippet）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#③-_自动注释工具（VVDocumenter）"><span class="nav-number">2.3.3.</span> <span class="nav-text">③. 自动注释工具（VVDocumenter）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-_适当添加注释"><span class="nav-number">2.4.</span> <span class="nav-text">4. 适当添加注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、自测"><span class="nav-number">3.</span> <span class="nav-text">三、自测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-_先检查后自测"><span class="nav-number">3.1.</span> <span class="nav-text">1. 先检查后自测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-_自测点要全部过一遍"><span class="nav-number">3.2.</span> <span class="nav-text">2. 自测点要全部过一遍</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、总结"><span class="nav-number">4.</span> <span class="nav-text">四、总结</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
